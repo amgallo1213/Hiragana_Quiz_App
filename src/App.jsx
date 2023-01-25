@@ -92,12 +92,18 @@ function App() {
   useEffect(() => {
     setRandomHiragana()
     setStreak(localStorage.getItem('streak') || 0)
-    setMaxStreak(localStorage.getItem('maxStreak') || 0)
+    setMaxStreak(localStorage.getItem('maxStreak') || 10)
   }, [])
 
   return (
-    <div className="App">
-      <h1>Hello, World!</h1>
+    <div className="min-h-screen bg-blue-800 text-white text-center">
+      <header className="p-6 mb-8">
+      <h1 className='text-2xl font-bold uppercase'>Hiragana Quiz</h1>
+      <div>
+        <p> { streak }/{ maxStreak} </p>
+      </div>
+      </header>
+      
 
     </div>
   )

@@ -80,7 +80,7 @@ function App() {
       localStorage.setItem('streak', streak + 1)
     } else{
       setStreak(0)
-      setError(`Nope! The correct answer for ${hiragana[current].hiragana} is ${hiragana[current].romanji}`)
+      setError(`Nope! The correct answer for ${hiragana[current].hiragana} is ${hiragana[current].romanji}.`)
 
       localStorage.setItem('streak', 0)
     }
@@ -98,7 +98,7 @@ function App() {
   return (
     <div className="min-h-screen bg-blue-800 text-white text-center">
       <header className="p-6 mb-8">
-        <h1 className='text-2xl font-bold uppercase'>Hiragana Quiz</h1>
+        <h1 className='text-3xl font-bold uppercase'>Hiragana Quiz</h1>
         <div>
           <p> { streak }/{ maxStreak} </p>
         </div>
